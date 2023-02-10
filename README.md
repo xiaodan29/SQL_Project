@@ -1,7 +1,7 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-(fill in your description and goals here)
+To become the real fantastic data scientist in the future
 
 ## Process
 ### (your step 1)
