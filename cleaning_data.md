@@ -9,4 +9,18 @@ What issues will you address by cleaning the data?
 
 Queries:
 Below, provide the SQL queries you used to clean your data.
-- 
+- Cleaning data of "unit price" and "product price" :
+  * UPDATE analytics
+    SET unit_price =unit_price / 1000000;
+  * UPDATE analytics
+    SET unit_price = ROUND(unit_price, 2);
+
+  * UPDATE all_sessions
+    SET productPrice =productPrice / 1000000;
+  * UPDATE all_sessions
+    SET "productPrice" = ROUND ("productPrice", 2);
+
+- Cleaning data of "ratio" in table " sales report"
+  * UPDATE sales_report
+    SET ratio = ROUND(ratio*100, 2 );
+
