@@ -39,10 +39,19 @@ Answer:
 
 
 Question 3: 
-- what is the restock level for each product? 
+- What is the average revenue generated per transaction by channel grouping?(organic search, referral, paid search etc.) 
 
 SQL Queries:
 
+SELECT "channelGrouping", ROUND(AVG("productPrice" * "productQuantity"), 2) AS "avg_rev_per_trans"
+
+FROM all_sessions
+
+GROUP BY "channelGrouping";
+
 Answer:
+
+![](qq3.png)
+
 
 
