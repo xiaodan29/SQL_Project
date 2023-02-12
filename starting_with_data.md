@@ -24,7 +24,17 @@ Question 2:
 
 SQL Queries:
 
+SELECT "country", COUNT("visitId")AS "visitors", COUNT("transactions")AS "No._transactions"
+
+FROM all_sessions
+
+GROUP BY "country"
+
+ORDER BY "No._transactions" DESC;
+
+
 Answer:
+![](QQ2.png)
 
 
 
