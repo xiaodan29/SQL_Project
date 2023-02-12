@@ -3,8 +3,6 @@ What issues will you address by cleaning the data?
 
 - In the sales report, the number of the ration has too many decimal places, needs to be clean by only 2 decimal places
 
-- In the all sessions, the time does not make sense, have to be cleaned and reorganizated 
-
 
 
 Queries:
