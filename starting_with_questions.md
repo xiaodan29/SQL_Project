@@ -7,28 +7,52 @@ Answer the following questions and provide the SQL queries used to find the answ
 SQL Queries:
 
 SELECT "city", "country", SUM("totalTransactionRevenue") as "total_Revenue"
+
 FROM all_sessions
+
 WHERE "totalTransactionRevenue" IS NOT null
+
 GROUP BY "city", "country"
+
 ORDER BY "total_Revenue" DESC;
 
 
+
 Answer:
-CITY                        COUNTRY              TOTAL REVENUE
-not availableindemo dataset	United States	    6092.56
-San Francisco	          United States	        1564.32
-Sunnyvale	              United States     	992.23
+CITY   
+COUNTRY  
+TOTAL REVENUE
+
+not availableindemo dataset	,
+United States,	    
+6092.56
+
+San Francisco,	
+United States,
+1564.32
+
+Sunnyvale,
+United States,    	
+992.23
 
 
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
-
 SQL Queries:
 
+SELECT "city","country", ROUND(AVG("num_products"),2) AS "avg_ordered"
 
+FROM (
+	SELECT "city","country", "visitId", COUNT ("productSKU") AS "num_products"
+    FROM all_sessions
+    GROUP BY "city","country", "visitId") AS sub
+
+GROUP BY "city","country";
 
 Answer:
+
+
 
 
 
@@ -38,6 +62,18 @@ Answer:
 
 
 SQL Queries:
+
+SELECT "city", "country", "v2ProductCategory", COUNT(DISTINCT"visitId")AS "No_visit"
+
+FROM (
+     SELECT A."city",A."country",A."v2ProductCategory",A."visitId",A."productSKU", S."total_ordered"
+     FROM all_sessions A
+     INNER JOIN sales_report S on S."productSKU" = A."productSKU") AS sub
+
+GROUP BY "city", "country", "v2ProductCategory"
+
+ORDER BY "city", "country", "No_visit" DESC ;
+
 
 
 
