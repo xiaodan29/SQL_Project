@@ -51,8 +51,7 @@ FROM (
 GROUP BY "city","country";
 
 Answer:
-
-![Q2](Q2.png)
+![Q2](Q-2.png)
 
 
 
@@ -75,7 +74,7 @@ ORDER BY "city", "country", "No_visit" DESC ;
 
 Answer:
 
-![Q3](Q3.png)
+![Q3](Q-3.png)
 
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
@@ -108,7 +107,7 @@ ORDER BY "sum_Revenue" DESC;
 
 
 Answer:
-![Q5](Q5.png)
+![Q5](Q-5.png)
 
 
 
