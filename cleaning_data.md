@@ -5,6 +5,8 @@ What issues will you address by cleaning the data?
 
 - In the sales report, the number of the ration has too many decimal places, needs to be clean by only 2 decimal places
 
+- In "all session" table, there are too many duplicate values in " visitId" column, which needs to be cleaned
+
 
 
 Queries:
@@ -29,3 +31,18 @@ Below, provide the SQL queries you used to clean your data.
   * UPDATE sales_report
     SET ratio = ROUND(ratio*100, 2 );
 
+
+- Cleaning duplicate values -(visitId) in "all session" table
+
+  * DELETE FROM all_sessions
+    WHERE "visitId" IN (
+
+      SELECT "visitId"
+
+      FROM all_sessions
+
+      GROUP BY "visitId"
+
+      HAVING COUNT (*) > 1
+
+    );
