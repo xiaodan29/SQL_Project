@@ -52,9 +52,7 @@ GROUP BY "city","country";
 
 Answer:
 
-
-
-
+![Q2](Q2.png)
 
 
 
@@ -75,12 +73,9 @@ GROUP BY "city", "country", "v2ProductCategory"
 ORDER BY "city", "country", "No_visit" DESC ;
 
 
-
-
 Answer:
 
-
-
+![Q3](Q3.png)
 
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
@@ -100,9 +95,20 @@ Answer:
 
 SQL Queries:
 
+SELECT "city", "country", SUM("totalTransactionRevenue")AS "sum_Revenue"
+
+FROM all_sessions
+
+WHERE "totalTransactionRevenue" IS NOT null
+
+GROUP BY "city", "country"
+
+ORDER BY "sum_Revenue" DESC;
+
 
 
 Answer:
+![Q5](Q5.png)
 
 
 
