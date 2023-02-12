@@ -1,6 +1,8 @@
 What issues will you address by cleaning the data?
 - unit price does not make sence, needs to be divided by 1,000,000, as well as the product price
 
+- Cleaning date of "Total transaction Revenue" in "all sessions" table, it still does not make sense with the huge number.
+
 - In the sales report, the number of the ration has too many decimal places, needs to be clean by only 2 decimal places
 
 
@@ -17,6 +19,11 @@ Below, provide the SQL queries you used to clean your data.
     SET productPrice =productPrice / 1000000;
   * UPDATE all_sessions
     SET "productPrice" = ROUND ("productPrice", 2);
+
+- Cleaning date of "Total transaction Revenue" in "all sessions" table
+  * UPDATE all_sessions
+    SET "totalTransactionRevenue" = ROUND("totalTransactionRevenue"/1000000, 2);     
+
 
 - Cleaning data of "ratio" in table " sales report"
   * UPDATE sales_report
