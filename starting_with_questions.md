@@ -6,10 +6,18 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 SQL Queries:
 
+SELECT "city", "country", SUM("totalTransactionRevenue") as "total_Revenue"
+FROM all_sessions
+WHERE "totalTransactionRevenue" IS NOT null
+GROUP BY "city", "country"
+ORDER BY "total_Revenue" DESC;
 
 
 Answer:
-
+CITY                        COUNTRY              TOTAL REVENUE
+not availableindemo dataset	United States	    6092.56
+San Francisco	          United States	        1564.32
+Sunnyvale	              United States     	992.23
 
 
 
