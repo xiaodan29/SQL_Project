@@ -82,10 +82,19 @@ Answer:
 
 SQL Queries:
 
+SELECT "city","country","v2ProductName",SUM("productQuantity") AS "top_selling"
+
+FROM all_sessions
+
+WHERE "productQuantity" IS NOT NULL
+
+GROUP BY "v2ProductName", "city", "country"
+
+ORDER BY "top_selling" DESC;
 
 
 Answer:
-
+![Q4](Q-4.png)
 
 
 
