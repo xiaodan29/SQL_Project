@@ -51,7 +51,7 @@ FROM (
 GROUP BY "city","country";
 
 Answer:
-![Q2](Q-2.png)
+![Q2](Q_2.png)
 
 
 
@@ -60,7 +60,7 @@ Answer:
 
 SQL Queries:
 
-SELECT "city", "country", "v2ProductCategory", COUNT(DISTINCT"visitId")AS "No_visit"
+SELECT "city", "country", "v2ProductCategory", COUNT(DISTINCT"visitId")AS "Num_visit"
 
 FROM (
      SELECT A."city",A."country",A."v2ProductCategory",A."visitId",A."productSKU", S."total_ordered"
@@ -69,12 +69,13 @@ FROM (
 
 GROUP BY "city", "country", "v2ProductCategory"
 
-ORDER BY "city", "country", "No_visit" DESC ;
+ORDER BY "Num_visit" DESC ;
 
 
 Answer:
+![Q3](Q_3.png)
 
-![Q3](Q-3.png)
+
 
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
