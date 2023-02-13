@@ -17,7 +17,7 @@ PRODUCT SKU :   "GGOEGOAQ012899"
  NAME       :    "Ballpoint LED Light Pen"       
  MOST POPULAR:  456
 
-![](qq1.png)
+![](screenshots/qq1.png)
 
 Question 2: 
 - How many transactions were made by visitors from each country? 
@@ -34,7 +34,7 @@ ORDER BY "No._transactions" DESC;
 
 
 Answer:
-![](QQ2.png)
+![](screenshots/QQ2.png)
 
 
 
@@ -51,7 +51,7 @@ GROUP BY "channelGrouping";
 
 Answer:
 
-![](qq3.png)
+![](screenshots/qq3.png)
 
 
 
