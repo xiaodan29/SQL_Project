@@ -51,7 +51,7 @@ FROM (
 GROUP BY "city","country";
 
 Answer:
-![Q2](Q_2.png)
+![Q2](screenshots/Q_2.png)
 
 
 
@@ -73,7 +73,7 @@ ORDER BY "Num_visit" DESC ;
 
 
 Answer:
-![Q3](Q_3.png)
+![Q3](screenshots/Q_3.png)
 
 
 
@@ -95,7 +95,7 @@ ORDER BY "top_selling" DESC;
 
 
 Answer:
-![Q4](Q-4.png)
+![Q4](screenshots/Q-4.png)
 
 
 
@@ -117,7 +117,7 @@ ORDER BY "sum_Revenue" DESC;
 
 
 Answer:
-![Q5](Q-5.png)
+![Q5](screenshots/Q-5.png)
 
 
 
