@@ -1,5 +1,5 @@
 What issues will you address by cleaning the data?
-- unit price does not make sence, needs to be divided by 1,000,000, as well as the product price
+-In "Analytics" talbe, unit price does not make sence, needs to be divided by 1,000,000, as well as the product price
 
 - Cleaning date of "Total transaction Revenue" in "all sessions" table, it still does not make sense with the huge number.
 
